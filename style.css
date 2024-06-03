@@ -1,0 +1,53 @@
+body{
+    margin: 0;
+    background-color: rgb(219, 221, 223);
+}
+.left{
+    float: left;
+    background-color: rgb(57, 188, 183);
+    width: 250px;
+    height: 100vh;
+    border-radius: 20px;
+    margin: 10px;
+    text-align: center;
+    position: relative;
+    color: white;
+
+}
+.left a{
+    text-decoration: none;
+    color: white;
+}
+.left img{
+    height: 15%;
+    border-radius: 60px;
+}
+.left ul{
+    list-style: none;
+    width: 100%;
+    padding: 0%;
+
+}
+.left li{
+    padding: 20px;
+}
+.left li:hover{
+    background-color: rgba(240, 248, 255, 0.563);
+}
+.left button{
+    width: 70%;
+    padding: 10px;
+    border-width: 0px;
+    border-radius: 4px;
+    background-color: white;
+    position: absolute;
+    bottom: 30px;
+    left: 40px;
+    height: 40px;
+
+}
+.left button:hover{
+    background-color: rgba(255, 255, 255, 0.585);
+    border-width: 2px;
+    border-color: black;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Management System</title>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="number"] {
+  padding: 5px;
+  margin-bottom: 10px;
+  width: 15%;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+#array,
+#result {
+  margin-top: 20px;
+}
+
+  </style>
+</head>
+<body>
+  <h1>Student Management System</h1>
+  <div>
+    <label for="marks">Enter Marks:</label>
+    <input type="text" id="marks" placeholder="Enter comma-separated marks">
+  </div>
+  <div>
+    <label for="start">Starting Roll Number:</label>
+    <input type="number" id="start" min="0" max="100" placeholder="Enter starting index">
+  </div>
+  <div>
+    <label for="end">Ending Roll Number:</label>
+    <input type="number" id="end" min="0" max="100" placeholder="Enter ending index">
+  </div>
+  <button onclick="calculateSum()">Calculate Sum</button>
+  <div id="array"></div>
+  <div id="result"></div>
+
+  <script>
+    function calculateSum() {
+      var marksInput = document.getElementById("marks").value;
+      var marks = marksInput.split(",").map(function (mark) {
+        return parseInt(mark.trim());
+      });
+
+      var start = parseInt(document.getElementById("start").value);
+      var end = parseInt(document.getElementById("end").value);
+
+      var sum = 0;
+      var array = [];
+      for (var i = start-1; i <= end-1; i++) {
+        sum += marks[i];
+        array.push(marks[i]);
+      }
+
+      document.getElementById("result").innerText = "Sum of marks: " + sum;
+      document.getElementById("array").innerText = "marks: [" + array.join(", ")+"]";
+    }
+  </script>
+</body>
+</html>
