@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION["name"] = $name;
         $_SESSION["username"] = $username;
 
-        header("Location: myplan.php"); // Redirect to dashboard page
+        header("Location: dashboard.php"); // Redirect to dashboard page
         exit;
     } else {
         header("Location: login.html"); // Redirect back to login page

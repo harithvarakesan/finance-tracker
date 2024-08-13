@@ -25,8 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $result1 = $conn->query($sql1);
 
         if ($result1 === TRUE) {
-            // header("Location: myplan.php");
-            header("Location: myplantask.php");
+            header("Location: myplan.php");
 
         }
     } else {

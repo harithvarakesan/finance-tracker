@@ -31,7 +31,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     echo "
     <tr>
-        <th><hr></th>
+        <th>TYPE<hr></th>
         <th>DATE<hr></th>
         <th>TYPE<hr></th>
         <th>DESCRIPTION<hr></th>

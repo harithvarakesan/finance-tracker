@@ -24,7 +24,7 @@ $sql = "UPDATE `users` SET `name`=?, `emailid`=?, `mobile_no.`=?, `city`=?, `sta
 
 $stmt = $conn->prepare($sql);
 
-$stmt->bind_param("ssssssss", $name, $email, $mobile_no, $city, $state, $username);
+$stmt->bind_param("ssssss", $name, $email, $mobile_no, $city, $state, $username);
 
 $stmt->execute();
         header("location: profile.php");
